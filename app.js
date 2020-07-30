@@ -47,9 +47,9 @@ if(process.env.NODE_ENV ===  'production'){
 
 }
 
-app.all("*", (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on the Server.`, 404));
-});
+// app.all("*", (req, res, next) => {
+//   next(new AppError(`Can't find ${req.originalUrl} on the Server.`, 404));
+// });
 
 
 
