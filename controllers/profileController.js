@@ -85,8 +85,6 @@ exports.createProfile = catchAsync(async (req, res, next) => {
     linkedin,
   } = req.body;
 
-  console.log(req.file);
-  console.log(req.body);
 
   // build profile object
   const profileFields = {};

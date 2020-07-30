@@ -141,9 +141,6 @@ export const addPost = (formData) => async (dispatch) => {
 
 // Add Comment
 export const addComment = (postId, formData) => async (dispatch) => {
-  console.log(`postId: ${postId}`);
-  console.log(`Send data from comment form is: ${formData}`);
-  console.log(`Send data from comment form is: ${formData.text}`);
 
   
   try {
@@ -167,7 +164,6 @@ export const addComment = (postId, formData) => async (dispatch) => {
 
     dispatch(setAlert("Comment added", "success"));
   } catch (err) {
-    console.log(`the error is : ${err.response.data.message}`);
     dispatch({
       type: POST_ERROR,
       payload: `Could not perform Add Comment`,

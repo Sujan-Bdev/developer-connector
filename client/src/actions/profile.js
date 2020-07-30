@@ -87,9 +87,7 @@ export const createProfile = (formData, history, edit = false) => async (
       },
     };
 
-    // const body = JSON.stringify(formData);
     const res = await axios.post("/api/v1/profile/me", formData, config);
-    // console.log(`the send data is ${res.data.profile}`);
 
     dispatch({
       type: GET_PROFILE,

@@ -48,8 +48,6 @@ export const register = ({ name, email, password, passwordConfirm }) => async (
     const body = JSON.stringify({ name, email, password, passwordConfirm });
 
     const response = await axios.post("/api/v1/users/signup", body, config);
-    //  const val = await response.data
-    // console.log(`checking the response portion ${response.data.token}`)
     dispatch({
       type: REGISTER_SUCCESS,
       payload: response.data,

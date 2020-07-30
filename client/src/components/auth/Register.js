@@ -99,26 +99,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { setAlert, register })(Register);
-
-// const newUser = {
-//   name,
-//   email,
-//   password,
-//   passwordConfirm,
-// };
-
-// try {
-//   const config = {
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   }
-//   const body = JSON.stringify(newUser);
-//   const response = await axios.post(
-//     "/api/v1/users/signup",body,config
-//   );
-//  const value = await (response.data)
-//   console.log(response.data.data.user.name);
-// } catch (err) {
-//   console.error(err);
-// }

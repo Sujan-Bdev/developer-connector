@@ -42,7 +42,6 @@ exports.createPost = catchAsync(async (req, res, next) => {
       new AppError(`User cannot be found! Please log in Again!!`, 404)
     );
   }
-  // console.log(user.name);
   const newPost = await Post.create({
     text: req.body.text,
     name: user.name,
